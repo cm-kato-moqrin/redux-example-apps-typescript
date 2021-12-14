@@ -25,7 +25,7 @@ export const fetchTodos = createAsyncThunk<Todo[]>(
   }
 );
 
-export const saveNewTodo = createAsyncThunk(
+export const saveNewTodo = createAsyncThunk<Todo, string>(
   'todos/saveNewTodo',
   async (text: string) => {
     const initialTodo = { text };
